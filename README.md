@@ -176,10 +176,6 @@ This script will:
 - Classify proverbs as ironic or not ironic.
 - Evaluate model performance and display metrics.
 
-### Output
-
-- Evaluation metrics will be displayed in the console.
-- Results and figures will be saved in the `output/` directory.
 
 ## Dependencies and Requirements
 
@@ -203,20 +199,17 @@ pip install -r requirements.txt
 multilingual-proverbs-irony/
 ├── data/
 │   └── proverbs.csv
-├── scripts/
-│   └── irony_detection.py
-├── output/
-│   ├── figures/
-│   └── results/
 ├── models/
+│   └── RoBERTa_Irony.ipynb
+│   └── RoBERTa_sentiment.ipynb
+│   └── distilbert_sentiment.ipynb
+│   └── combined_approach.ipynb
 ├── README.md
 ├── requirements.txt
 
 ```
 
 - **data/**: Contains the dataset.
-- **scripts/**: Python scripts for data processing and analysis.
-- **output/**: Contains output files like evaluation results and figures.
 - **models/**: Directory for saving trained models (if applicable).
 - **README.md**: Detailed project description.
 - **requirements.txt**: Python package requirements.
