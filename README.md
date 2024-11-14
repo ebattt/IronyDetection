@@ -211,7 +211,7 @@ multilingual-proverbs-irony/
 ├── models/
 ├── README.md
 ├── requirements.txt
-├── LICENSE
+
 ```
 
 - **data/**: Contains the dataset.
