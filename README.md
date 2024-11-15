@@ -2,7 +2,18 @@
 
 ## Abstract
 
-Figurative language, such as irony, enriches human communication by conveying meanings beyond literal expressions. However, detecting irony poses significant challenges for Natural Language Processing (NLP) due to its subtlety and cultural specificity. This study investigates the presence of irony in proverbs across Greek, German, and Italian languages by analyzing the sentiment differences between their literal English translations and intended meanings. We constructed a custom multilingual dataset of proverbs, performed preprocessing, and applied various sentiment analysis models, including VADER, DistilBERT, RoBERTa, and a combined approach utilizing FLAN-T5 for text simplification and DistilBERT for sentiment analysis. Our experiments revealed that while advanced transformer-based models achieved an overall accuracy of approximately 60% in detecting irony, the combined approach did not significantly enhance performance, underscoring the inherent complexity of irony detection. These findings highlight the limitations of current sentiment analysis techniques in capturing the nuances of figurative language and suggest the need for models capable of deeper semantic understanding. Future work involves incorporating more sophisticated models and exploring irony detection across different languages and cultures.
+Figurative language, such as irony, enriches human communication by conveying meanings beyond literal expressions. However, detecting irony poses significant
+challenges for Natural Language Processing (NLP) due to its subtlety and cultural
+specificity. This study investigates the presence of irony in proverbs across Greek,
+German, and Italian languages by analyzing the sentiment differences between their
+literal English translations and intended meanings. We constructed a custom multilingual dataset of proverbs, performed preprocessing, and applied various sentiment
+analysis models, including VADER, DistilBERT, RoBERTa, and a combined approach
+utilizing FLAN-T5 for text simplification and DistilBERT for sentiment analysis. Our
+experiments revealed that while advanced transformer-based models achieved an overall accuracy of approximately 60% in detecting irony, neither the combined approach
+nor the direct irony classification method did not significantly enhance performance,
+underscoring the inherent complexity of irony detection. These findings highlight
+the limitations of current sentiment analysis techniques in capturing the nuances of
+figurative language and suggest the need for models capable of deeper semantic understanding. Future work involves incorporating more sophisticated models and exploring irony detection across different languages and cultures.
 
 ## Introduction
 
@@ -16,7 +27,9 @@ Metaphor interpretation has also been a focus of research. Liu et al. [3] tested
 
 Our work builds upon these studies by applying sentiment analysis to detect irony in proverbs, which are inherently figurative and culturally specific. By analyzing sentiment differences, we aim to identify ironic expressions that traditional models might overlook.
 
+Our work builds upon these studies by applying sentiment analysis to detect irony in proverbs, which are inherently figurative and culturally specific. By analyzing sentiment differences, we aim to identify ironic expressions that traditional models might overlook.
 The problem we addressed was how to detect irony in proverbs by analyzing the sentiment difference between their literal English translations and their intended meanings. This project lies in the area of sentiment analysis, a major subfield of NLP, with a focus on sentiment comparison to identify linguistic features such as irony. Our approach involved creating a dataset, performing sentiment analysis using transformer-based models, and validating our method against manually labeled data.
+
 
 Drawing parallels between metaphor and irony detection, we aim to contribute to the broader understanding of figurative language processing in NLP.
 
@@ -37,6 +50,8 @@ An example from the dataset:
 | German       | Das ist nicht mein Bier | This is not my beer             | This is not my problem     | Yes       |
 
 We chose to construct the dataset ourselves because no existing dataset suited our specific combination of languages and the focus on irony in proverbs. Additionally, creating our own dataset allowed us to tailor the content to meet the needs of our analysis, ensuring a balance of languages and diverse examples.
+
+Alternative options could have included using an existing dataset, though we were unable to find one that matched our languages and requirements. Another option would have been to automate the dataset creation through web scraping, but we opted for manual curation to ensure quality and relevance in the selected proverbs.
 
 ## Preprocessing
 
