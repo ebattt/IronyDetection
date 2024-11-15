@@ -142,56 +142,20 @@ Moreover, drawing inspiration from Guzman Piedrahita et al.'s work [4], which hi
 
 ## How to Run the Code
 
-### Prerequisites
+### Open the Notebook:
 
-- **Python 3.7** or higher
-- Install required packages:
+Navigate to the desired notebook within the models/ directory (e.g., RoBERTa_Irony.ipynb, RoBERTa_sentiment.ipynb, distilbert_sentiment.ipynb, etc.).
+Open the notebook in Google Colab or any environment that supports Jupyter notebooks.
+Install Dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+Each notebook contains a command to install necessary dependencies from the requirements.txt file, so there’s no need for separate environment setup.
 
-### Clone the Repository
+Execute the first code cell in the notebook, which includes %pip install -r ../requirements.txt. This will automatically install all dependencies required for the notebook.
+### File Setup:
 
-```bash
-git clone https://github.com/yourusername/multilingual-proverbs-irony.git
-cd multilingual-proverbs-irony
-```
-
-### Dataset
-
-Ensure the `proverbs.csv` dataset is located in the `data/` directory.
-
-### Running the Script
-
-```bash
-python scripts/irony_detection.py
-```
-
-This script will:
-
-- Load and preprocess the dataset.
-- Perform sentiment analysis using the selected models.
-- Calculate sentiment differences.
-- Classify proverbs as ironic or not ironic.
-- Evaluate model performance and display metrics.
+Ensure that the proverbs.csv dataset is located in the data/ directory, which is referenced within the code cells.
 
 
-## Dependencies and Requirements
-
-- **pandas**
-- **numpy**
-- **nltk**
-- **torch**
-- **transformers**
-- **scikit-learn**
-- **matplotlib**
-
-Install all dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
 
 ## Repository Structure
 
@@ -212,6 +176,6 @@ multilingual-proverbs-irony/
 - **data/**: Contains the dataset.
 - **models/**: Directory for saving trained models (if applicable).
 - **README.md**: Detailed project description.
-- **requirements.txt**: Python package requirements.
+- **requirements.txt**: Package requirements.
 
 
